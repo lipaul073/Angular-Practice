@@ -1,2 +1,5 @@
 <h2> {{task.id}}. {{task.text}} </h2>
 <p>{{task.day}}</p>
+<app-delete-btn
+    (click)="deleteBtnClick()"
+></app-delete-btn>

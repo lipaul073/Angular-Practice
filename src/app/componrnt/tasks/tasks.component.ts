@@ -8,11 +8,13 @@ import { Task } from 'src/app/interface/Task';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
-  tasks:Task[]=[]
+  tasks:Task[]=[];
   constructor(private TaskService:TaskService) { }
 
   ngOnInit(): void {
-    this.TaskService.getTask().subscribe((t)=>this.tasks=t)
+    this.TaskService.getTask().subscribe((t)=>this.tasks=t);
   }
-  
+  deleteTask(item:Task){
+    this.TaskService.deleteTask(item).subscribe(()=>this.tasks = this.tasks.filter((t)=>t.id !== item.id));
+  }
 }

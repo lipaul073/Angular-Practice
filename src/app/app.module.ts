@@ -8,6 +8,7 @@ import { HeaderComponent } from './componrnt/header/header.component';
 import { FooterComponent } from './componrnt/footer/footer.component';
 import { ToggleBtnComponent } from './componrnt/toggle-btn/toggle-btn.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DeleteBtnComponent } from './delete-btn/delete-btn.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     TaskComponent,
     HeaderComponent,
     FooterComponent,
-    ToggleBtnComponent
+    ToggleBtnComponent,
+    DeleteBtnComponent
   ],
   imports: [
     BrowserModule,
