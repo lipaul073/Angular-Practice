@@ -1,7 +1,15 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient ,HttpHeaders} from '@angular/common/http'
 import { Task } from '../interface/Task';
 import { Observable } from 'rxjs';
+
+const httpOpentions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+}
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -18,4 +26,9 @@ export class TaskService {
     const url:string=`${this.apiUrl}/${task.id}`
     return this.Http.delete<Task>(url);
   }
+  toggleTask(task:Task):Observable<Task>{
+    const url:string=`${this.apiUrl}/${task.id}`
+    return this.Http.put<Task>(url,task,httpOpentions);
+  }
+
 }
