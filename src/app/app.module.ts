@@ -2,10 +2,20 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { TasksComponent } from './componrnt/tasks/tasks.component';
+import { TaskComponent } from './componrnt/task/task.component';
+import { HeaderComponent } from './componrnt/header/header.component';
+import { FooterComponent } from './componrnt/footer/footer.component';
+import { ToggleBtnComponent } from './componrnt/toggle-btn/toggle-btn.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TasksComponent,
+    TaskComponent,
+    HeaderComponent,
+    FooterComponent,
+    ToggleBtnComponent
   ],
   imports: [
     BrowserModule
