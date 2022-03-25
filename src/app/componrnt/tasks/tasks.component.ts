@@ -8,11 +8,11 @@ import { Task } from 'src/app/interface/Task';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
-
+  tasks:Task[]=[]
   constructor(private TaskService:TaskService) { }
 
   ngOnInit(): void {
-    this.TaskService.getTask().subscribe((t)=>(console.log(t)))
+    this.TaskService.getTask().subscribe((t)=>this.tasks=t)
   }
-
+  
 }
