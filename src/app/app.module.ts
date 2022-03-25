@@ -7,6 +7,7 @@ import { TaskComponent } from './componrnt/task/task.component';
 import { HeaderComponent } from './componrnt/header/header.component';
 import { FooterComponent } from './componrnt/footer/footer.component';
 import { ToggleBtnComponent } from './componrnt/toggle-btn/toggle-btn.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ToggleBtnComponent } from './componrnt/toggle-btn/toggle-btn.component'
     ToggleBtnComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
