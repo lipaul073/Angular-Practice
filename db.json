@@ -18,40 +18,16 @@
   },
   "tasks": [
     {
-      "id": 2,
-      "text": "喝下午茶",
-      "day": "15:00",
-      "reminder": false
+      "text": "123123",
+      "day": "123",
+      "reminder": true,
+      "id": 1
     },
     {
-      "id": 3,
-      "text": "吃晚餐",
-      "day": "18:00",
-      "reminder": false
-    },
-    {
-      "id": 4,
-      "text": "吃晚餐",
-      "day": "18:00",
-      "reminder": false
-    },
-    {
-      "id": 5,
-      "text": "吃晚餐",
-      "day": "18:00",
-      "reminder": false
-    },
-    {
-      "id": 6,
-      "text": "吃晚餐",
-      "day": "18:00",
-      "reminder": false
-    },
-    {
-      "id": 7,
-      "text": "吃晚餐",
-      "day": "18:00",
-      "reminder": false
+      "text": "123",
+      "day": "123",
+      "reminder": true,
+      "id": 2
     }
   ]
 }

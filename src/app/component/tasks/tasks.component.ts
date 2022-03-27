@@ -8,17 +8,21 @@ import { Task } from 'src/app/interface/Task';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
-  tasks:Task[]=[];
-  constructor(private TaskService:TaskService) { }
+  tasks: Task[] = [];
+  constructor(private TaskService: TaskService) { }
 
   ngOnInit(): void {
-    this.TaskService.getTask().subscribe((t)=>this.tasks=t);
+    this.TaskService.getTask().subscribe((t) => this.tasks = t);
   }
-  deleteTask(item:Task){
-    this.TaskService.deleteTask(item).subscribe(()=>this.tasks = this.tasks.filter((t)=>t.id !== item.id));
+  deleteTask(item: Task) {
+    this.TaskService.deleteTask(item).subscribe(() => this.tasks = this.tasks.filter((t) => t.id !== item.id));
   }
-  toggleTask(item:Task){
+  toggleTask(item: Task) {
     item.reminder = !item.reminder;
     this.TaskService.toggleTask(item).subscribe();
   }
+  addTask(item: Task) {
+    this.TaskService.addTask(item).subscribe((item) => this.tasks.push(item));
+  }
+
 }
