@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,12 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  @Output() toggleInput = new EventEmitter;
   title:string="todolist"
   constructor() { }
 
   ngOnInit(): void {
   }
   toggleTask(){
-    console.log("hi")
+    this.toggleInput.emit();
   }
 }

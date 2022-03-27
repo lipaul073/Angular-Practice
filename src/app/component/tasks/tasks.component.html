@@ -1,4 +1,12 @@
-<app-input (addNewTask)="addTask($event)"></app-input>
+<app-header (toggleInput)="toggleInput()"></app-header>
+<div
+  class="input"
+  *ngIf="showInput"
+>
+
+  <app-input (newTaskEmit)="newTask($event)"></app-input>
+
+</div>
 <app-task
   *ngFor="let item of tasks"
   [task]="item"

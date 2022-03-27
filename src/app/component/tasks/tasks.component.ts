@@ -9,6 +9,7 @@ import { Task } from 'src/app/interface/Task';
 })
 export class TasksComponent implements OnInit {
   tasks: Task[] = [];
+  showInput: boolean = false;
   constructor(private TaskService: TaskService) { }
 
   ngOnInit(): void {
@@ -21,8 +22,11 @@ export class TasksComponent implements OnInit {
     item.reminder = !item.reminder;
     this.TaskService.toggleTask(item).subscribe();
   }
-  addTask(item: Task) {
-    this.TaskService.addTask(item).subscribe((item) => this.tasks.push(item));
+  newTask(item: Task) {
+    this.TaskService.addTask(item).subscribe(() => this.tasks.push(item));
   }
-
+  toggleInput() {
+    this.showInput = !this.showInput;
+    console.log(this.showInput);
+  }
 }
