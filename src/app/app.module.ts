@@ -11,6 +11,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { DeleteBtnComponent } from './component/delete-btn/delete-btn.component';
 import { InputComponent } from './component/input/input.component';
 import { FormsModule } from '@angular/forms';
+import { AboutComponent } from './component/about/about.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: '', component: FooterComponent },
+  { path: 'about', component: AboutComponent }
+
+]
 
 @NgModule({
   declarations: [
@@ -21,12 +29,14 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     ToggleBtnComponent,
     DeleteBtnComponent,
-    InputComponent
+    InputComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes, { enableTracing: true })
   ],
   providers: [],
   bootstrap: [AppComponent]
